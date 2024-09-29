@@ -7,11 +7,7 @@ from requests.auth import HTTPBasicAuth
 
 class DataReader(object):
     def __init__(self, symbol, at, last, period):
-<<<<<<< HEAD
         self.id = '***'
-=======
-        self.id = '****'
->>>>>>> 4d6899cd5d6032a295ba6b3bbd95940846968186
         self.password = '***'
         self.symbol   = symbol
         self.at       = at
@@ -21,11 +17,7 @@ class DataReader(object):
 
     def read_data(self):
         symbol_url    = f"{self.symbol}.E.BIST"
-<<<<<<< HEAD
-        url           = f"http://**/{symbol_url}/**/{self.period}/***/{self.at}*****/{self.last}"
-=======
         url           = f"http://***{symbol_url}***{self.period}***{self.at}***{self.last}" # URL
->>>>>>> 4d6899cd5d6032a295ba6b3bbd95940846968186
         response      = requests.get(url, auth=HTTPBasicAuth(self.id, self.password))
         json_response = response.json()
 
